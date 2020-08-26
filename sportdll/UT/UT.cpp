@@ -1,6 +1,6 @@
 #include "pch.h"
 #include "CppUnitTest.h"
-
+#include "../sportdll/sport.h"
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 namespace UT
@@ -11,7 +11,15 @@ namespace UT
 		
 		TEST_METHOD(TestMethod1)
 		{
-			Assert::AreEqual(1, 2);
+			sport s;
+			s.setSpeed(2);
+			Assert::AreEqual(s.getSpeed(), 2);
+		};
+		TEST_METHOD(TestMethod2)
+		{
+			sport s;
+			s.setSpeed(2);
+			Assert::AreEqual(s.getSpeed(), 1);
 		}
 	};
 }
