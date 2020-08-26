@@ -19,7 +19,7 @@ namespace UT
 		{
 			sport s;
 			s.setSpeed(2);
-			Assert::AreEqual(s.getSpeed(), 1);
+			Assert::AreEqual(s.getSpeed(), 2);
 		}
 	};
 }
