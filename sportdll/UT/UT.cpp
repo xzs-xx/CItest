@@ -11,7 +11,7 @@ namespace UT
 		
 		TEST_METHOD(TestMethod1)
 		{
-			Assert::AreEqual(1, 1);
+			Assert::AreEqual(1, 2);
 		}
 	};
 }
