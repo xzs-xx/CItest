@@ -21,7 +21,7 @@ namespace UT
 			s.setSpeed(2);
 			Assert::AreEqual(s.getSpeed(), 2);
 		};
-		TEST_METHOD(TestMethod2)
+		TEST_METHOD(TestMethod3)
 		{
 			sport s;
 			s.setSpeed(2);
