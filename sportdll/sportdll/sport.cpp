@@ -6,7 +6,7 @@ void _declspec(dllexport) sport::setSpeed(int speed1)
 
 int _declspec(dllexport) sport::getSpeed()
 {
-	return speed;
+	return speed + 1;
 }
 
 void _declspec(dllexport) sport::addSpeed(int speed1)
