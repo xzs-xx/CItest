@@ -20,6 +20,12 @@ namespace UT
 			sport s;
 			s.setSpeed(2);
 			Assert::AreEqual(s.getSpeed(), 2);
+		};
+		TEST_METHOD(TestMethod2)
+		{
+			sport s;
+			s.setSpeed(2);
+			Assert::AreEqual(s.getSpeed(), 3);
 		}
 	};
 }
