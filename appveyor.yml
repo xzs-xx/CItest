@@ -44,3 +44,18 @@ notifications:
   on_build_success: false
   on_build_failure: true
   on_build_status_changed: false
+- provider: Email
+  to:
+  - 2993426163@qq.com
+  message: 撒大苏打
+  on_build_success: true
+  on_build_failure: false
+  on_build_status_changed: false
+- provider: Email
+  to:
+  - 2993426163@qq.com
+  subject: aswqe
+  message: 萨芬大师傅撒法
+  on_build_success: false
+  on_build_failure: false
+  on_build_status_changed: true
