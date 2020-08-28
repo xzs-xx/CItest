@@ -1,0 +1,46 @@
+version: 1.0.{build}
+max_jobs: 3
+image: Visual Studio 2017
+configuration: DeBug
+platform: x64
+shallow_clone: true
+clone_depth: 5
+clone_folder: C:\Users\DELL\Desktop\project\CItest
+build:
+  project: sportdll\sportdll.sln
+  publish_wap: true
+  parallel: true
+  verbosity: minimal
+before_test:
+- cmd: >-
+    echo %cd%
+
+    cd .\sportdll\x64\Debug
+
+    echo %cd%
+
+    vstest.console.exe UT.dll
+test:
+  assemblies:
+    only:
+    - '**\*.UT.dll'
+after_test:
+- cmd: ''
+artifacts:
+- path: sportdll\x64\Debug\*dll
+  name: CItest
+deploy:
+- provider: GitHub
+  auth_token:
+    secure: MtdaTuCPU4EI47xjiYcl1FfqIjF7JbOGOd/8jlpWkJEKLoNooZEQuPOYsf37Qm5D
+  on:
+    branch: /zsxie
+notifications:
+- provider: Email
+  to:
+  - 2993426163@qq.com
+  subject: as
+  message: 构建失败
+  on_build_success: false
+  on_build_failure: true
+  on_build_status_changed: false
